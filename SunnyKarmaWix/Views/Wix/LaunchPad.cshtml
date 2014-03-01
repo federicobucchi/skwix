@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SunnyKarma Wix Launch Pad</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/SunnyKarmaWix.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                InitFacebook('124542747736773');
+            })
+        </script>
+    </head>
+    <body>
+        <div style="color: red; font-weight: bold; padding-bottom: 20px;">
+            @TempData["message"]
+        </div>
+        <form method="POST" action="/wix/signin">
+            <fieldset style="border-color: grey;">
+                <legend>Sign in</legend>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input type="text" name="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" name="password"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Sign in"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br/>
+        <form method="POST" action="/wix/signup">
+            <fieldset style="border-color: grey;">
+                <legend>Sign up</legend>
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td>
+                            <input type="text" name="username"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input type="text" name="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" name="password"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Zipcode</td>
+                        <td>
+                            <input type="text" name="zipcode"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Sign up"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br/>
+        <div class="fb-login-button"
+             data-show-faces="true"
+             scope="email,user_about_me,offline_access,publish_stream,publish_actions">
+            Connect with Facebook
+        </div>
+    </body>
+</html>
