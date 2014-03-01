@@ -119,7 +119,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cause.cs" />
+    <Compile Include="Models\DataManager.cs" />
+    <Compile Include="Models\NativeBalanceChange.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WixOwner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
