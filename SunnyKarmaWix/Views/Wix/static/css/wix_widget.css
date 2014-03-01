@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+  line-height: 1em;
+  font-family: Arial;
+}
+
+html body h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+html body h2 {
+  font-size: 1.8em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+html body table {
+  border-spacing: 0;
+}
+
+html body table tr td {
+  padding-bottom: 20px;
+}
+
+html body form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #479b97;
+  font-size: 1.2em;
+}
+
+html body form input[type="submit"] {
+  padding: 10px 0;
+  font-size: 1.2em;
+  color: #ffffff;
+  border: 0;
+  background-color: #ff6900;
+}
+
+html body header {
+  height: 50px;
+  width: 420px;
+  background-color: #479b97;
+}
+
+html body header a {
+  background: #479b97 url('../imgs/logo.jpg') 0 0 no-repeat;
+  margin: 0 auto;
+  width: 196px;
+  height: 50px;
+  display: block;
+}
+
+html body header a h1 em {
+  display: none;
+}
+
+html body section {
+  font-size: 14px;
+}
+
+html body .content {
+  width: 400px;
+  padding: 20px 10px 0 10px;
+}
+
+/* donate */
+
+html body .content section.donate {
+  width: 400px;
+  margin: 0 auto;
+}
+
+html body .content section.donate h2 span {
+  font-weight: bold;
+}
+
+html body .content section.donate form {
+  padding-top: 20px;
+}
+
+html body .content section.donate form fieldset {
+  border: 0;
+}
+
+html body .content section.donate form fieldset td {
+  width: 100%;
+}
+
+html body .content section.donate form fieldset td input[type="submit"] {
+  width: 100%;
+}
+
+/* signin - signup */
