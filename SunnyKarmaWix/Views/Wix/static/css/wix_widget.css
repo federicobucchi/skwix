@@ -17,6 +17,11 @@ html body {
   font-family: Arial;
 }
 
+html body a {
+  color: #FF6600;
+  text-decoration: none;
+}
+
 html body h1 {
   font-size: 1.8em;
   font-weight: bold;
@@ -27,10 +32,15 @@ html body h2 {
   font-size: 1.8em;
   font-weight: normal;
   line-height: 1.2em;
+  clear: left;
 }
 
 html body table {
   border-spacing: 0;
+}
+
+html body form fieldset {
+  border: 0;
 }
 
 html body table tr td {
@@ -38,7 +48,7 @@ html body table tr td {
 }
 
 html body form input[type="text"] {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #479b97;
   font-size: 1.2em;
 }
@@ -78,6 +88,18 @@ html body .content {
   padding: 20px 10px 0 10px;
 }
 
+html body .content form {
+  padding-top: 20px;
+}
+
+html body .content form fieldset td {
+  width: 100%;
+}
+
+html body .content form fieldset td input[type="submit"] {
+  width: 100%;
+}
+
 /* donate */
 
 html body .content section.donate {
@@ -89,20 +111,66 @@ html body .content section.donate h2 span {
   font-weight: bold;
 }
 
-html body .content section.donate form {
-  padding-top: 20px;
-}
-
-html body .content section.donate form fieldset {
-  border: 0;
-}
-
-html body .content section.donate form fieldset td {
-  width: 100%;
-}
-
-html body .content section.donate form fieldset td input[type="submit"] {
-  width: 100%;
-}
-
 /* signin - signup */
+
+html body .content section.signin-signup {
+  width: 400px;
+  margin: 0 auto;
+}
+
+html body .content section.signin-signup h2 span {
+  font-weight: bold;
+}
+
+html body .content section.signin-signup a.facebook,
+html body .content section.signin-signup a.twitter,
+html body .content section.signin-signup a.linkedin,
+html body .content section.signin-signup a.openid {
+  width: 150px;
+  height: 22px;
+  display: block;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+html body .content section.signin-signup a.facebook {
+  background: #ffffff url('../imgs/facebook.jpg') 0 0 no-repeat;
+
+}
+
+html body .content section.signin-signup a.twitter {
+  background: #ffffff url('../imgs/twitter.jpg') 0 0 no-repeat;
+}
+
+html body .content section.signin-signup a.linkedin {
+  background: #ffffff url('../imgs/linkedin.jpg') 0 0 no-repeat;
+}
+
+html body .content section.signin-signup a.openid {
+  background: #ffffff url('../imgs/openid.jpg') 0 0 no-repeat;
+  margin: 0 10px 50px 0;
+}
+
+html body .content section.signin-signup .signin_show_box,
+html body .content section.signin-signup .signup_show_box {
+  display: none;
+  float: left;
+}
+
+html body .content section.signin-signup .active {
+  display: block;
+}
+
+html body .content section.signin-signup .menu {
+  margin-bottom: 20px;
+  float: right;
+}
+
+html body .content section.signin-signup .menu a {
+  float: left;
+  margin-right: 10px;
+}
+
+html body .content section.signin-signup .menu a.active {
+  text-decoration: underline;
+}
