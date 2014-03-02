@@ -48,9 +48,20 @@ var actions = {
       password = $('.signin input[name="password"]').val();
       amount = helper.getURLParameter('amount');
 
+      /* Old params sending
       if (validation.submitSignin(email, password, amount)) {
         url = 'logging.html?amount=' + amount + '&email=' + email + '&password=' + password;
         document.location.href = url;
+      }
+      */
+
+      if (validation.submitSignin(email, password, amount)) {
+        $.get("api/signin.json", {
+          email: email,
+          password: password
+        }).done(function(data) {
+          (data.Status == 'ok') ? alert('Login Successful') : alert('Login Unsuccessful');;
+        });
       }
 
       return false;
@@ -65,9 +76,55 @@ var actions = {
       password = $('.signup input[name="password"]').val();
       amount = helper.getURLParameter('amount');
 
+      /* Old params sending
       if (validation.submitSignup(username, email, zipcode, password, amount)) {
         url = 'signup.html?amount=' + amount + '&username=' + username + '&email=' + email + '&zipcode=' + zipcode + '&password=' + password;
         document.location.href = url;
+      }
+      */
+
+      if (validation.submitSignup(username, email, zipcode, password, amount)) {
+        $.get("api/signup.json", {
+          email: email,
+          password: password,
+          username: username,
+          zipcode: zipcode
+        }).done(function(data) {
+          (data.Status == 'ok') ? alert('Signup '+ data.Username) : alert('Try again');
+        });
+      }
+
+      return false;
+    });
+  },
+
+  submitDonate: function() {
+    $('.donate input[type="submit"]').click(function() {
+      username = $('.signup input[name="username"]').val();
+      ccnumber = $('.signup input[name="ccnumber"]').val();
+      ccsecurity = $('.signup input[name="ccsecurity"]').val();
+      ccexpdate = $('.signup input[name="ccexpdate"]').val();
+      wixinstanceid = $('.signup input[name="wixinstanceid"]').val();
+      amount = helper.getURLParameter('amount');
+
+      /* Old params sending
+      if (validation.submitSignup(username, email, zipcode, password, amount)) {
+        url = 'signup.html?amount=' + amount + '&username=' + username + '&email=' + email + '&zipcode=' + zipcode + '&password=' + password;
+        document.location.href = url;
+      }
+      */
+ 
+      if (validation.submitDonate(username, ccnumber, ccsecurity, ccexpdate, amount, wixinstanceid)) {
+        $.get("api/donate.json", {
+        username: username,
+        ccnumber: ccnumber,
+        ccsecurity: ccsecurity,
+        ccexpdate: ccexpdate,
+        amount: amount,
+        wixinstanceid: wixinstanceid
+        }).done(function(data) {
+          (data.Status == 'ok') ? alert('Donation done') : alert('Try again');
+        });
       }
 
       return false;
@@ -82,6 +139,9 @@ var actions = {
       if (validation.pressSkip(amount)) {
         url = 'donate.html?amount=' + amount + '&no_signin_signup=' + no_signin_signup;
         document.location.href = url;
+      }
+
+      if (validation.pressSkip(amount)) {
       }
 
       return false;
@@ -116,13 +176,6 @@ var actions = {
 
 
 
-var responses = {
-
-
-
-};
-
-
 
 var validation = {
 
@@ -144,6 +197,14 @@ var validation = {
 
   submitSignup: function(username, email, zipcode, password, amount) {
     if ((username) && (email) && (zipcode) && (password) && (amount)) {
+      return true
+    } else {
+      return false
+    }
+  },
+
+  submitDonate: function(username, ccnumber, ccsecurity, ccexpdate, amount, wixinstanceid) {
+    if ((username) && (ccnumber) && (ccsecurity) && (ccexpdate) && (amount) && (wixinstanceid)) {
       return true
     } else {
       return false
