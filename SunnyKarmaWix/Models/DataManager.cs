@@ -18,6 +18,14 @@ namespace SunnyKarmaWix.Models
             return new SqlConnection("");
         }
 
+        public static WixOwner GetWixOwner(string wixInstanceId)
+        {
+            CloudTableClient client = GetCloudTableClient();
+            CloudTable wixOwnerTable = client.GetTableReference("WixOwner");
+            return wixOwnerTable.ExecuteQuery(wixOwnerTable.CreateQuery<WixOwner>())
+                                .FirstOrDefault(x => x.WixInstanceId == wixInstanceId);
+        }
+
         public static void AddWixOwner(WixOwner owner)
         {
             CloudTableClient client = GetCloudTableClient();

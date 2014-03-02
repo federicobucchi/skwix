@@ -132,6 +132,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\SunnyKarmaWix.js" />
+    <Content Include="Scripts\ui-lib.min.js" />
+    <Content Include="Styles\ui-lib.min.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

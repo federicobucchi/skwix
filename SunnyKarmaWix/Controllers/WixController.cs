@@ -20,6 +20,25 @@ namespace SunnyKarmaWix.Controllers
             return View();
         }
 
+        public ActionResult Settings()
+        {
+            return View();
+        }
+
+        public ActionResult Widget()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public JsonResult SKWixInstance(string WixInstanceId)
+        {
+            var owner = DataManager.GetWixOwner(WixInstanceId);
+            if (owner == null)
+                return new JsonResult {Data = new {Status = "notfound"}};
+            return new JsonResult {Data = new {Status = "exists", Username = owner.Username}};
+        }
+
         [HttpPost]
         public async Task<JsonResult> OwnerSignIn(string Email, string Password, string WixInstanceId)
         {
