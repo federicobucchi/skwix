@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SunnyKarma</title>
+  <link href='css/wix_widget.css' media='screen' rel='stylesheet'>
+
+  <script type="text/javascript" src="http://sslstatic.wix.com/services/js-sdk/1.24.0/js/Wix.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="js/wix_widget.js"></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#">
+      <h1><em>SunnyKarma</em></h1>
+    </a>
+  </header>
+  <div class="content">
+    <section class="donate">
+      <p>We accept VISA, Mastercard, American Express, Discover, Diner's Club, JCB. Payments are processed in a highly secure environment. We do not store your credit card information.</p>
+      <ul>
+        <li><img class="card-image" src="imgs/visa.jpg"/></li>
+        <li><img class="card-image" src="imgs/mastercard.jpg"/></li>
+        <li><img class="card-image" src="imgs/americanexpress.jpg"/></li>
+        <li><img class="card-image" src="imgs/discover.jpg"/></li>
+      </ul>
+      <form method="POST">
+        <fieldset style="border-color: grey;">
+          <table>
+            <tr>
+              <td>Donation amount:</td>
+              <td>
+                <input type="text" name="amount" placeholder="$"/>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="payment-wrap">
+                  <div class="payment-wrap-inner">
+                    Payment details
+                  </div>
+                  <div class="card-number">Card number</div>
+                  <img src="imgs/locker.gif"/>
+                  <input type="text" name="ccnumber" placeholder="0000 0000 0000 0000" class="card-number-input"/>
+                  <div class="valid">
+                    <div class="card-number">Valid thru</div>
+                    <input type="text" class="bid-input-month" placeholder="MM" id="expMonth" autocomplete="off">
+                    <span class="dash">/</span>
+                    <input type="text" class="bid-input-year" placeholder="YY" id="expYear" autocomplete="off">
+                  </div>
+                  <div class="cvc">
+                    <div class="card-number">CVC</div>
+                    <input type="text" class="bid-input-cvc" id="cvc" placeholder="123" autocomplete="off">
+                  </div>
+                </div>
+                <input type="checkbox" id="agreed-cb" checked="">
+                <span class="agreement">I agree to SunnyKarma's standard <a href="/Terms">Terms of Use</a>, <a href="/Privacy">Privacy Policy</a> and <a href="/Sweepstakes">Sweepstakes Policy</a></span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" value="Donate Now"/>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

@@ -22,6 +22,10 @@ html body a {
   text-decoration: none;
 }
 
+html body ul {
+  list-style-type: none;
+}
+
 html body h1 {
   font-size: 1.8em;
   font-weight: bold;
@@ -37,6 +41,10 @@ html body h2 {
 
 html body table {
   border-spacing: 0;
+}
+
+html body p {
+  line-height: 1.2em;
 }
 
 html body form fieldset {
@@ -109,6 +117,82 @@ html body .content section.donate {
 
 html body .content section.donate h2 span {
   font-weight: bold;
+}
+
+html body .content section.donate img.card-image {
+  width: 85px;
+  height: 50px;
+}
+
+html body .content section.donate ul {
+  float: left;
+  margin: 20px 0;
+}
+
+html body .content section.donate ul li {
+  float: left;
+  margin-right: 5px;
+}
+
+html body .content section.donate .payment-wrap {
+  border-radius: 10px;
+  background: #ccc;
+  padding: 20px;
+  position: relative;
+  float: left;
+  margin-bottom: 20px;
+}
+
+html body .content section.donate .payment-wrap .payment-wrap-inner {
+  background: #333;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 -20px 15px;
+  padding: 10px 0 10px 20px;
+}
+
+html body .content section.donate .payment-wrap .card-number {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #333;
+}
+
+html body .content section.donate .payment-wrap img {
+  position: absolute;
+  left: 366px;
+  top: 60px;
+}
+
+html body .content section.donate .payment-wrap .card-number-input {
+  width: 348px;
+  border: 1px solid #999;
+}
+
+html body .content section.donate .payment-wrap .valid {
+  margin: 20px 100px 0 0;
+  float: left;
+}
+
+html body .content section.donate .payment-wrap .valid .bid-input-month,
+html body .content section.donate .payment-wrap .valid .bid-input-year,
+html body .content section.donate .payment-wrap .cvc .bid-input-cvc {
+  border: 1px solid #999;
+  width: 70px;
+  color: #333;
+}
+
+html body .content section.donate .payment-wrap .cvc {
+  float: left;
+  margin-top: 20px;
+}
+
+html body .content section.donate .payment-wrap #agreed-cb {
+  float: left;
+}
+
+html body .content section.donate span.agreement {
+  line-height: 1.2em;
 }
 
 /* signin - signup */
